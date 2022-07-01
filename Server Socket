@@ -23,7 +23,7 @@ def send_pickle(pickle_obj, conn, addr):
     send_length += b' ' * (HEADER - len(send_length))
     conn.send(send_length)
     conn.send(pickle_obj)
-    def handle_client(conn, addr):
+def handle_client(conn, addr):
     print(f"[CLIENT CONNECTED] {addr} connected.\n")
     connnected = True
     while(connnected):
